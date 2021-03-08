@@ -6,10 +6,14 @@ function getPlot(id) {
     // getting data from the json file
     d3.json("../data/samples.json").then((data)=> {
         console.log(data)
-
-        let wfreq = data.metadata.map(d => d.wfreq)
-        console.log(`Washing Freq: ${wfreq}`)
         
+        // filter meta data info by id to obtain the wfrequency for the gauge plot
+        let result1 = data.metadata.filter(meta => meta.id.toString() === id)[0];
+        // console.log(result1);
+
+        let wfreq2 = result1.wfreq;
+        // console.log(wfreq2);
+
         // filter sample values by id 
         let samples = data.samples.filter(s => s.id.toString() === id)[0];
         
@@ -38,7 +42,7 @@ function getPlot(id) {
             y: OTU_id,
             text: labels,
             marker: {
-            color: '#bcbddc'},
+            color: '#ef6548'},
             type:"bar",
             orientation: "h",
         };
@@ -52,12 +56,6 @@ function getPlot(id) {
             yaxis:{
                 tickmode:"linear",
             },
-            margin: {
-                l: 100,
-                r: 100,
-                t: 100,
-                b: 30
-            }
         };
 
         // create the bar plot
@@ -80,9 +78,7 @@ function getPlot(id) {
 
         // set the layout for the bubble plot
         let layout_b = {
-            xaxis:{title: "OTU ID"},
-            height: 600,
-            width: 1000
+            xaxis:{title: "OTU ID"}
         };
 
         // creating data variable 
@@ -96,32 +92,29 @@ function getPlot(id) {
         let data_g = [
         {
         domain: { x: [0, 1], y: [0, 1] },
-        value: parseInt(wfreq),
+        value: parseInt(wfreq2),
         title: { text: "Belly Button Washing Frequency", font: {size: 14}},
         type: "indicator",
         
         mode: "gauge+number",
         gauge: { axis: { range: [null, 9] },
                 steps: [
-                    { range: [0, 1], color: "#e0ecf4" },
-                    { range: [1, 2], color: "#9ebcda" },
-                    { range: [2, 3], color: "#8856a7" },
-                    { range: [3, 4], color: "#e0f3db" },
-                    { range: [4, 5], color: "#a8ddb5" },
-                    { range: [6, 7], color: "#43a2ca" },
-                    { range: [7, 8], color: "#1c9099" },
-                    { range: [8, 9], color: "##2c7fb8" },
+                    { range: [0, 1], color: "#ffffe5" },
+                    { range: [1, 2], color: "#fff7bc" },
+                    { range: [2, 3], color: "#fee391" },
+                    { range: [3, 4], color: "#fec44f" },
+                    { range: [4, 5], color: "#fe9929" },
+                    { range: [5, 6], color: "#cc4c02" },
+                    { range: [6, 7], color: "#993404" },
+                    { range: [7, 8], color: "#662506" },
+                    { range: [8, 9], color: "#7f0000" },
 
                 ]}
             
         }
         ];
-        let layout_g = { 
-            width: 700, 
-            height: 600, 
-            margin: { t: 20, b: 40, l:100, r:100 } 
-        };
-        Plotly.newPlot("gauge", data_g, layout_g);
+
+        Plotly.newPlot("gauge", data_g);
     });
 }  
 // create the function to get the necessary data
@@ -137,6 +130,9 @@ function getInfo(id) {
         // filter meta data info by id
         let result = metadata.filter(meta => meta.id.toString() === id)[0];
         console.log(result);
+
+        // let wfreq1 = result.wfreq;
+        // console.log(wfreq1)
 
         // select demographic panel to put data
         let demographicInfo = d3.select("#sample-metadata");
