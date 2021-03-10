@@ -38,10 +38,10 @@ The dataset reveals that a small handful of microbial species (also called opera
 * You will need to modify the example gauge code to account for values ranging from 0 through 9.
 * Update the chart whenever a new sample is selected.
 
-Started sample visualization:
-<p align="center"><img width="550" height= "450" src="Images/Capture1.PNG"></p>
+Started sample visualization Test Subject ID No. 940:
+<p align="center"><img width="700" height= "650" src="Images/Capture1.PNG"></p>
 
 <hr>
 
-Updated sample visualization:
-<p align="center"><img width="550" height= "450" src="Images/Capture2.PNG"></p>
+Updated sample visualization Test Subject ID No. 952:
+<p align="center"><img width="700" height= "650" src="Images/Capture2.PNG"></p>
