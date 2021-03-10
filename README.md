@@ -5,7 +5,8 @@
 
  * Deploy github page: [Interactive Visualization Dashboard](https://krla20.github.io/Plotly-Challenge/)
  <hr>
- Interactive dashboard to explore the [Belly Button Biodiversity dataset](http://robdunnlab.com/projects/belly-button-biodiversity/)
+
+* Interactive dashboard to explore the  [Belly Button Biodiversity dataset](http://robdunnlab.com/projects/belly-button-biodiversity/)
  <p align="center"><img width="400" height= "300" src="Images/bacteria.jpg"></p>
 <hr>
 The dataset reveals that a small handful of microbial species (also called operational taxonomic units, or OTUs, in the study) were present in more than 70% of people, while the rest were relatively rare.
@@ -38,9 +39,9 @@ The dataset reveals that a small handful of microbial species (also called opera
 * Update the chart whenever a new sample is selected.
 
 Started sample visualization:
-<p align="center"><img width="800" height= "500" src="Images/Capture1.PNG></p>
+<p align="center"><img width="500" height= "450" src="Images/Capture1.PNG"></p>
 
 <hr>
 
 Updated sample visualization:
-<p align="center"><img width="800" height= "500" src="Images/Capture2.PNG"></p>
+<p align="center"><img width="500" height= "450" src="Images/Capture2.PNG"></p>
