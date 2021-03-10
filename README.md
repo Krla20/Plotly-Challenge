@@ -4,14 +4,15 @@
 *********************************
 
  * Deploy github page: [Interactive Visualization Dashboard](https://krla20.github.io/Plotly-Challenge/)
- <hr>
 
-* Interactive dashboard to explore the  [Belly Button Biodiversity dataset](http://robdunnlab.com/projects/belly-button-biodiversity/)
+ * Interactive dashboard to explore the  [Belly Button Biodiversity dataset](http://robdunnlab.com/projects/belly-button-biodiversity/)
+ 
  <p align="center"><img width="400" height= "300" src="Images/bacteria.jpg"></p>
-<hr>
+<br>
 The dataset reveals that a small handful of microbial species (also called operational taxonomic units, or OTUs, in the study) were present in more than 70% of people, while the rest were relatively rare.
 <br>
-## Step 1: Plotly
+
+## Plotly
 
 1. Use the D3 library to read in `samples.json`.
 
